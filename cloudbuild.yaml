@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args: ['-c', gcloud secrets versions access latest --secret=git-ssh > /root/.ssh/id_rsa']
+  volumes:
+  - name: 'ssh'
+    path: /root/.ssh
