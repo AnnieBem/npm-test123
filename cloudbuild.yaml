@@ -12,6 +12,7 @@ steps:
   - -c
   - |
     chmod 600 /root/.ssh/config
+    cat <<EOF >/root/.ssh/config
     Hostname github.com
     IdentityFile /root/.ssh/id_rsa
     EOF
